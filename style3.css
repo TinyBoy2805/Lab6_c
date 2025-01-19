@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 50px 20px;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.content-wrapper {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f0b500;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e09c00;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hexagon Box Styles */
+.languages-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.side {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.hexagon-box {
+    width: 120px;
+    height: 120px;
+    background-color: #4CAF50;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: flex-start;  /* Aligning items to the left */
+    align-items: center;
+    padding-left: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease-in-out;
+    font-size: 40px;
+    color: white;
+}
+
+.hexagon-box i {
+    font-size: 50px; /* Adjust size of the icon */
+    margin-right: 10px; /* Space between icon and label */
+}
+
+.hexagon-box p {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    left: 50%;  /* Center the text horizontally */
+    transform: translateX(-50%);
+}
+
+.hexagon-box:hover {
+    transform: scale(1.1);
+}
+
+/* Adding fading effect for overflow */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1;
+}
